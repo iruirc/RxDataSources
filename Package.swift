@@ -17,7 +17,13 @@ let package = Package(
         .package(url: "https://github.com/ReactiveX/RxSwift.git", .upToNextMajor(from: "6.0.0"))
     ],
     targets: [
-        .target(name: "RxDataSources", dependencies: ["Differentiator", "RxSwift", "RxCocoa"]),
+        .target(
+            name: "RxDataSources",
+            dependencies: [
+                "Differentiator",
+                .product(name: "RxCocoa-Dynamic", package: "RxSwift")
+            ]
+        ),
         .target(name: "Differentiator"),
         .testTarget(name: "RxDataSourcesTests", dependencies: ["RxDataSources"])
     ],
