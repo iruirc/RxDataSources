@@ -14,14 +14,14 @@ let package = Package(
         .library(name: "Differentiator", targets: ["Differentiator"])
     ],
     dependencies: [
-        .package(url: "https://github.com/ReactiveX/RxSwift.git", .upToNextMajor(from: "6.0.0"))
+        .package(url: "https://github.com/iruirc/RxSwift.git", branch: "VSDC")
     ],
     targets: [
         .target(
             name: "RxDataSources",
             dependencies: [
                 "Differentiator",
-                .product(name: "RxCocoa-Dynamic", package: "RxSwift")
+                .product(name: "RxAll-Dynamic", package: "RxSwift")
             ]
         ),
         .target(name: "Differentiator"),
