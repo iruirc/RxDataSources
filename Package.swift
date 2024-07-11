@@ -14,7 +14,7 @@ let package = Package(
         .library(name: "Differentiator", targets: ["Differentiator"])
     ],
     dependencies: [
-        .package(url: "https://github.com/iruirc/RxSwift.git", from: "6.7.100")
+        .package(url: "https://github.com/iruirc/RxSwift.git", exact: "6.7.100")
     ],
     targets: [
         .target(
